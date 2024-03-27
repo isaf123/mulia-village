@@ -8,7 +8,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
     <div className="w-full h-fit flex justify-between bg-white px-10 py-8">
       <Image src={"/logo-muliavillage.png"} alt="" width={20} height={16} />
       <div
-        className="text-lg text-color1 flex gap-6
+        className="text-lg text-color2 flex gap-6
       "
       >
         <p>Home</p>
