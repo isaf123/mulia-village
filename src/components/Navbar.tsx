@@ -8,16 +8,16 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
     <div className="w-full h-fit flex justify-between bg-white px-10 py-8">
       <Image src={"/logo-muliavillage.png"} alt="" width={20} height={16} />
       <div
-        className="text-lg text-color2 flex gap-6
+        className="text-lg text-color1 flex justify-between
       "
       >
-        <p>Home</p>
-        <p>About Us</p>
-        <p>Contact</p>
-        <p>Product</p>
-        <p>Site plan</p>
-        <p>Info</p>
-        <p>Promo</p>
+        <p className="hover:font-bold cursor-pointer">Home</p>
+        <p className="hover:font-bold cursor-pointer">About Us</p>
+        <p className="hover:font-bold cursor-pointer">Contact</p>
+        <p className="hover:font-bold cursor-pointer">Product</p>
+        <p className="hover:font-bold cursor-pointer">Site plan</p>
+        <p className="hover:font-bold cursor-pointer">Info</p>
+        <p className="hover:font-bold cursor-pointer">Promo</p>
       </div>
     </div>
   );
