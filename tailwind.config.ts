@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { Inter, Montserrat, Poppins, Playfair_Display } from "next/font/google";
 
 const config: Config = {
   content: [
@@ -8,15 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors:{
         color1 :"#054005",
         color2 :"#F8B200"
+      },
+      fontFamily:{
+       poppins :["Poppins","sans-serif"],
+       playfair:["Playfair_Display","serif"]
       }
+
 
     },
   },

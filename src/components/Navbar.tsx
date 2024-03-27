@@ -11,8 +11,10 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
         className="text-lg text-color1 flex justify-between
       "
       >
-        <p className="hover:font-bold cursor-pointer">Home</p>
-        <p className="hover:font-bold cursor-pointer">About Us</p>
+        <p className="hover:font-bold cursor-pointer font-playfair italic">
+          Home
+        </p>
+        <p className="hover:font-bold cursor-pointer font-poppins">About Us</p>
         <p className="hover:font-bold cursor-pointer">Contact</p>
         <p className="hover:font-bold cursor-pointer">Product</p>
         <p className="hover:font-bold cursor-pointer">Site plan</p>
