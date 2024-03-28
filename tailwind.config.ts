@@ -10,13 +10,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        color1 :"#054005",
-        color2 :"#F8B200"
+      colors: {
+        color1: "#054005",
+        color2: "#F8B200"
       },
-      fontFamily:{
-       poppins :["Poppins","sans-serif"],
-       playfair:["Playfair_Display","serif"]
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        playfair: ["Playfair_Display", "serif"]
       }
 
 

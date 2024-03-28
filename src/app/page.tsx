@@ -1,3 +1,4 @@
+import LokasiStrategis from "@/view/lokasi_strategis";
 import Image from "next/image";
 import Divider1 from "@/components/Divider1";
 import Divider2 from "@/components/DIvider2";
@@ -9,6 +10,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <AboutUs />
+      <LokasiStrategis />
     </div>
   );
 }
