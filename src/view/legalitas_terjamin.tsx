@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Card1 from "@/components/Card1";
 import { GrDocumentText } from "react-icons/gr";
@@ -26,27 +27,21 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
           number="Nomor : 97/9.35.15/V/2019"
           date="Tanggal Terbit : 23 Mei 2019"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <GrDocumentText />
-          </div>
+          <GrDocumentText />
         </Card1>
         <Card1
           title="Izin Lokasi - Dinas Penanaman Modal & Pelayanan Terpadu Satu Pintu"
           number="Nomor : 503/275/438.5.16/2019"
           date="Tanggal Terbit : 05 Agustus 2019"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <TfiMapAlt />
-          </div>
+          <TfiMapAlt />
         </Card1>
         <Card1
           title="Izin Andalalin (Analisis Dampak Lalu Lintas) - Dinas Perhubungan"
           number="Nomor : 188/859/438.1.1.3/2019"
           date="Tanggal Terbit : 12 Desember 2019"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <PiRoadHorizon />
-          </div>
+          <PiRoadHorizon />
         </Card1>
       </div>
       <div className="gap-10 flex px-[5rem] pt-20">
@@ -55,27 +50,21 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
           number="Nomor : 660/0556/438.5.3/2020"
           date="Tanggal Terbit : 25 Februari 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <RiLeafFill />
-          </div>
+          <RiLeafFill />
         </Card1>
         <Card1
           title="Izin Peil Banjir - Dinas Pekerjaan Umum Bina Marga & Sumber Daya Air"
           number="Nomor : 610/0353/438.5.3/2020"
           date="Tanggal Terbit : 12 Maret 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <FaWater />
-          </div>
+          <FaWater />
         </Card1>
         <Card1
           title="Izin Teknis Sistem Drainase - Dinas Perumahan Permukiman Cipta Karya & Tata Ruang"
           number="Nomor : 188/1030/438.5.4/2020"
           date="Tanggal Terbit : 08 Juni 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <FaWater />
-          </div>
+          <FaWater />
         </Card1>
       </div>
       <div className="gap-10 flex px-[5rem] pt-20">
@@ -84,27 +73,21 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
           number="Nomor : 610/0355/438.5.3/2020"
           date="Tanggal Terbit : 12 Maret 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <FaMoneyBillWave />
-          </div>
+          <FaMoneyBillWave />
         </Card1>
         <Card1
           title="Izin Siteplan - Dinas Perumahan Permukiman Cipta Karya & Tata Ruang"
           number="Nomor : 188/433/438.1.1.3/2020"
           date="Tanggal Terbit : 08 Juni 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <FaHouse />
-          </div>
+          <FaHouse />
         </Card1>
         <Card1
           title="Izin Mendirikan Bangunan (IMB) - Dinas Penanaman Modal & Pelayanan Terpadu Satu Pintu"
           number="Nomor : 658/2020"
           date="Tanggal Terbit : 08 November 2020"
         >
-          <div className="rounded-full border-2 border-black h-[4rem] w-[4rem] flex justify-center items-center">
-            <FaHouse />
-          </div>
+          <FaHouse />
         </Card1>
       </div>
     </div>
