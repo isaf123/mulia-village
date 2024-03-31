@@ -14,7 +14,7 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
   props
 ) => {
   return (
-    <div>
+    <div className="mb-[7rem]">
       <p className="text-color1 text-center text-2xl py-[7rem]">
         Kami sangat memahami keinginan customer mengenai legalitas. Jangan
         khawatir dengan Mulia <br /> Village Juanda, kami sudah melengkapi
