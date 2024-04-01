@@ -6,6 +6,8 @@ import HeroSection from "@/view/HeroSection";
 import AboutUs from "@/view/AboutUs";
 import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
+import TestimonialsCustomer from "@/view/testimonials_customer";
+
 
 export default function Home() {
   return (
@@ -15,7 +17,12 @@ export default function Home() {
       <LokasiStrategis />
       <Divider1>Legalitas Terjamin</Divider1>
       <LegalitasTerjamin />
+
       <TypeRumah />
+
+      <Divider1>Testimonials from</Divider1>
+      <TestimonialsCustomer />
+
     </div>
   );
 }
