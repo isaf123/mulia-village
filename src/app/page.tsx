@@ -18,7 +18,6 @@ export default function Home() {
       <LokasiStrategis />
       <Fasilitas />
       <TypeRumah />
-      <Divider1>Legalitas Terjamin</Divider1>
       <LegalitasTerjamin />
       <Divider1>Testimonials from</Divider1>
       <TestimonialsCustomer />
