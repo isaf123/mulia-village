@@ -19,13 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-
         <NavbarMobile />
         <NavbarDesktop />
-        <div className="max-w-[1920px] min-w-[1920px] m-auto">{children}</div>
-
+        <div className="max-w-[1920px] m-auto">{children}</div>
       </body>
     </html>
   );
 }
-
