@@ -1,3 +1,9 @@
+
+import Footer from "@/view/Footer";
+import ManagedBy from "@/view/ManagedBy";
+import Image from "next/image";
+import Faq from "@/view/FAQ";
+import Fasilitas from "@/view/Fasilitas";
 import LokasiStrategis from "@/view/lokasi_strategis";
 import Image from "next/image";
 import Divider1 from "@/components/Divider1";
@@ -9,20 +15,27 @@ import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
 
 
+
+
+
 export default function Home() {
   return (
     <div className="bg-[#E9E9E9]">
       <HeroSection />
       <AboutUs />
       <LokasiStrategis />
+      <Fasilitas />
+      <TypeRumah />
       <Divider1>Legalitas Terjamin</Divider1>
       <LegalitasTerjamin />
-
-      <TypeRumah />
-
       <Divider1>Testimonials from</Divider1>
       <TestimonialsCustomer />
+      
+      <Faq />
+      <ManagedBy />
+      <Footer />
 
     </div>
+
   );
 }
