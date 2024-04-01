@@ -92,7 +92,7 @@ const TestimonialsCustomer: React.FunctionComponent<
                     />
                     <div id="testimony">
                       <p className="text-4xl mb-[70px]">
-                        <b className="text-5xl">"</b>
+                        <b className="text-5xl">&ldquo;</b>
                         {customer.testimony1a}
                         <span className="font-bold text-5xl">
                           {keywordsGreen[idx]}
@@ -101,7 +101,7 @@ const TestimonialsCustomer: React.FunctionComponent<
                           {keywordsYellow[idx]}
                         </span>
                         {customer.testimony1b}
-                        <b className="text-5xl">"</b>
+                        <b className="text-5xl">&ldquo;</b>
                       </p>
                     </div>
                     <div className="w-[5rem] h-[3px] bg-color1 mb-10" />
