@@ -7,6 +7,7 @@ interface IDivider2Props {
 const Divider2: React.FunctionComponent<IDivider2Props> = (props) => {
   return (
     <div className="w-full flex h-fit items-center">
+
       <div className=" flex-1  relative">
         <div className="flex justify-end items-center h-[60px] md:h-[126px]">
           <p className="font-playfair text-[20px] md:text-[80px] text-color1 italic pr-3">
@@ -17,6 +18,7 @@ const Divider2: React.FunctionComponent<IDivider2Props> = (props) => {
       </div>
 
       <p className="font-poppin text-[20px] md:text-[70px] text-color2 font-bold bg-color1 w-full flex-1 flex pl-3 h-[60px] md:h-[126px] items-center">
+
         {props.children.split(" ")[1]}
       </p>
     </div>

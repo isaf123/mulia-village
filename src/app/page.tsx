@@ -21,6 +21,7 @@ export default function Home() {
     setActive(true);
   }, []);
   return (
+
     <div>
       {active ? (
         <div className="fixed  w-full h-full z-[9999]">
@@ -51,16 +52,19 @@ export default function Home() {
       ) : (
         <></>
       )}
-      <div className="bg-[#E9E9E9]">
-        <HeroSection />
-        <AboutUs />
-        <LokasiStrategis />
-        <Fasilitas />
-        <TypeRumah />
-        <Divider1>Legalitas Terjamin</Divider1>
-        <LegalitasTerjamin />
-        <Divider1>Testimonials from</Divider1>
-        <TestimonialsCustomer />
+     
+
+    <div className="bg-[#E9E9E9]">
+      <HeroSection />
+      <AboutUs />
+      <LokasiStrategis />
+      <Fasilitas />
+      <TypeRumah />
+      <Divider1>Legalitas Terjamin</Divider1>
+      <LegalitasTerjamin />
+      <Divider1>Testimonials from</Divider1>
+      <TestimonialsCustomer />
+
 
         <Faq />
         <ManagedBy />

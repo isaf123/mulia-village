@@ -8,8 +8,9 @@ const LokasiStrategisComponent3: React.FunctionComponent<
   ILokasiStrategisComponent3Props
 > = (props) => {
   return (
-    <section className="mb-[10rem]">
-      <div className="flex justify-end">
+    <section className="md:mb-[10rem]">
+      {/* desktop version */}
+      <div className="hidden md:flex justify-end">
         <div id="itskampus">
           <Image
             width="900"
@@ -29,6 +30,38 @@ const LokasiStrategisComponent3: React.FunctionComponent<
             </div>
           </div>
           <div className="border-color1 border-b-8 w-[850px] h-[336px] text-2xl pl-[50px] py-[50px] pr-[150px]">
+            Tinggal dekat dengan rumah sakit memberikan rasa aman dan nyaman
+            bagi penghuni Mulia Village. Sehingga mengurangi kekhawatiran dalam
+            menghadapi situasi darurat kesehatan.
+          </div>
+        </div>
+      </div>
+
+      {/* mobile version */}
+
+      <div className="flex w-[390px] justify-end md:hidden">
+        <div id="itskampus">
+          <Image
+            width="182"
+            height="312"
+            src="/mitrakeluarga2.webp"
+            alt="its"
+            className="object-fill"
+          ></Image>
+        </div>
+        <div className="flex flex-col">
+          <div className="h-[110px] w-[187px] bg-color1 p-3">
+            <h1 className="text-color2 text-xl">
+              <b>5 min</b> to
+            </h1>
+            <div className="text-xs font-semibold text-white mt-2">
+              <h1 className="tracking-widest">
+                ITS campus <br />
+                (Institut Teknologi Sepuluh Nopember)
+              </h1>
+            </div>
+          </div>
+          <div className="border-color1 border-b-2 text-xs w-[187px] h-[202px] px-5 pt-6 text-left tracking-tight">
             Tinggal dekat dengan rumah sakit memberikan rasa aman dan nyaman
             bagi penghuni Mulia Village. Sehingga mengurangi kekhawatiran dalam
             menghadapi situasi darurat kesehatan.
