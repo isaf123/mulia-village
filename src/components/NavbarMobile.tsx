@@ -12,7 +12,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
         <Image src={"/logo-muliavillage.png"} alt="" width={40} height={40} />
         <RxHamburgerMenu width={130} height={130} className="text-color1" />
 
-        <button className=" transform -rotate-90  whitespace-nowrap fixed -right-[90px] top-[50%] py-5 px-10 bg-black">
+        <button className=" transform -rotate-90  whitespace-nowrap fixed -right-[90px] bottom-[20%] py-5 px-10 bg-black">
           <p className="text-[10px] font-bold text-white">
             Download E-Brochure Here
           </p>
