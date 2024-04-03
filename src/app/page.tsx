@@ -10,7 +10,10 @@ import AboutUs from "@/view/AboutUs";
 import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
+
 import PureSyariah from "@/view/pure_syariah";
+
+
 import Contact from "@/view/Contact";
 
 import Image from "next/image";
@@ -30,7 +33,7 @@ export default function Home() {
           <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
 
           <IoMdCloseCircleOutline
-            className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[63%] top-16 md:top-20"
+            className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[61%] top-[90px] md:top-32"
             onClick={() => {
               setActive(!active);
             }}
@@ -63,8 +66,10 @@ export default function Home() {
         <TypeRumah />
         <LegalitasTerjamin />
 
+
         <TestimonialsCustomer />
         <PureSyariah />
+
 
         <Faq />
         <ManagedBy />
