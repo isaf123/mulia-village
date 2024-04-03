@@ -34,7 +34,7 @@ const typeHouse = [
   {
     type: "Pahlevi",
     wide: "90/100",
-    bedroom: "2 Bedroom",
+    bedroom: "3 Bedroom",
     bathroom: "2 Bathroom",
     carport: "2 Carport",
     src: "/Pahlevi.jpg",
