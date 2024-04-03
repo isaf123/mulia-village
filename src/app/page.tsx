@@ -9,6 +9,7 @@ import AboutUs from "@/view/AboutUs";
 import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
+import PureSyariah from "@/view/pure_syariah";
 
 export default function Home() {
   return (
@@ -19,9 +20,8 @@ export default function Home() {
       <Fasilitas />
       <TypeRumah />
       <LegalitasTerjamin />
-      <Divider1>Testimonials from</Divider1>
       <TestimonialsCustomer />
-
+      <PureSyariah />
       <Faq />
       <ManagedBy />
       <Footer />

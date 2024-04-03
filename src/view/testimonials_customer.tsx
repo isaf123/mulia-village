@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Divider1 from "@/components/Divider1";
 
 interface ITestimonialsCustomerProps {}
 interface ICustomer {
@@ -63,15 +64,21 @@ const TestimonialsCustomer: React.FunctionComponent<
     },
   ];
   return (
-    <div className="">
+    <div className="w-[390px] md:w-full">
+      <Divider1>Testimonials from</Divider1>
       <div className="text-7xl flex align-middle items-center mb-10">
-        <div id="line" className="w-[861px] h-[6px] bg-color1" />
-        <h1 className="font-poppins font-bold text-color1 text-center">our</h1>
-        <h1 className="font-playfair text-color2 text-center italic">
+        <div
+          id="line"
+          className="w-[112px] md:w-[861px] h-[2px] md:h-[6px] bg-color1"
+        />
+        <h1 className="font-poppins font-bold text-color1 text-center text-xl md:text-7xl">
+          our
+        </h1>
+        <h1 className="font-playfair text-color2 text-center italic text-xl md:text-7xl">
           customers
         </h1>
       </div>
-      <div className="flex justify-center items-center mx-[10rem] mb-[5rem] mt-[7rem]">
+      <div className="hidden md:flex justify-center items-center mx-[10rem] mb-[5rem] mt-[7rem] ">
         <Carousel>
           <CarouselContent>
             {customers.map((customer: ICustomer, idx) => (
@@ -121,6 +128,12 @@ const TestimonialsCustomer: React.FunctionComponent<
           <CarouselPrevious className="bg-[#E9E9E9] w-[2.5rem] h-[2.5rem] mr-10" />
           <CarouselNext className="bg-[#E9E9E9] w-[2.5rem] h-[2.5rem] ml-10" />
         </Carousel>
+      </div>
+      <div className="flex flex-col justify-center items-center space-y-8 md:hidden">
+        <img src="Frame1.png" alt="testi1" className="w-[273px]" />
+        <img src="Frame2.png" alt="testi2" className="w-[273px]" />
+        <img src="Frame3.png" alt="testi3" className="w-[273px]" />
+        <img src="Frame4.png" alt="testi4" className="w-[273px]" />
       </div>
     </div>
   );

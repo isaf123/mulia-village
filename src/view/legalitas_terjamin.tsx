@@ -15,25 +15,9 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
   props
 ) => {
   return (
-    <div className="mb-[7rem] w-[390px] md:w-full">
-      <div className="hidden md:block">
+    <div className=" mt-[77px] md:mt-[118px] mb-12 md:mb-[7rem] w-[390px] md:w-full">
+      <div>
         <Divider1>Legalitas Terjamin</Divider1>
-      </div>
-      <div className=" flex w-[390px] md:hidden mt-[4rem]">
-        <div className="bg-color1 w-1/2 h-[50px]">
-          <h1 className="font-poppins font-bold text-color2 text-end text-lg md:text-3xl mt-3">
-            Legalitas
-          </h1>
-        </div>
-        <div className="w-1/2 h-[50px] border-b-2 border-color1 text-lg md:text-3xl">
-          <h1 className="font-playfair text-color1 text-start italic mt-3">
-            Terjamin
-          </h1>
-        </div>
-
-        <div className="md:hidden justify-end mt-5 flex">
-          <div className="w-1/2 h-[6px] bg-red-500 mb-10"></div>
-        </div>
       </div>
       <p className="text-color1 text-center text-xs md:text-2xl mt-5 mb-12 md:mt-0 md:mb-0 md:py-[7rem] px-5 md:px-0">
         Kami sangat memahami keinginan customer mengenai legalitas. Jangan
@@ -41,7 +25,7 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
         hunian kami dengan semua perizinan hingga IMB. Sehingga <br />
         anda hanya perlu beli dan tinggal.
       </p>
-      <div className="gap-3 md:gap-x-8 md:gap-y-36  grid grid-cols-2 grid-rows-5 md:grid-cols-3 md:grid-rows-3 mx-5 md:mx-[5rem] justify-center items-center">
+      <div className="gap-3 md:gap-x-8 md:gap-y-36  grid grid-cols-2 grid-rows-4 md:grid-cols-3 md:grid-rows-3 mx-5 md:mx-[5rem] justify-center items-center">
         <Card1
           title="Izin Pertimbangan Teknis Pertanahan - BPN"
           number="Nomor : 97/9.35.15/V/2019"
@@ -100,6 +84,17 @@ const LegalitasTerjamin: React.FunctionComponent<ILegalitasTerjaminProps> = (
         >
           <FaHouse />
         </Card1>
+        <div className="hidden md:block">
+          <Card1
+            title="Izin Mendirikan Bangunan (IMB) - Dinas Penanaman Modal & Pelayanan Terpadu Satu Pintu"
+            number="Nomor : 658/2020"
+            date="Tanggal Terbit : 08 November 2020"
+          >
+            <FaHouse />
+          </Card1>
+        </div>
+      </div>
+      <div className="flex w-[169px] mt-5 justify-center items-center mx-auto md:hidden">
         <Card1
           title="Izin Mendirikan Bangunan (IMB) - Dinas Penanaman Modal & Pelayanan Terpadu Satu Pintu"
           number="Nomor : 658/2020"
