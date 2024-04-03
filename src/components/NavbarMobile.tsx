@@ -26,7 +26,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
 
   return (
     <div className="fixed w-full block md:hidden z-[99]">
-      <div className="h-[60px] flex justify-between  py-3 relative opacity-[50%] bg-white z-20"></div>
+      <div className="h-[60px] flex justify-between  py-3 relative opacity-[90%] bg-[#E9E9E9] z-20"></div>
       <div className="absolute top-0 z-50 flex justify-between items-center w-full h-[60px] px-[30px]">
         <Image src={"/logo-muliavillage.png"} alt="" width={40} height={40} />
         <RxHamburgerMenu

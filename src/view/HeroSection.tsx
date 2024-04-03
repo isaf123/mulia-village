@@ -6,7 +6,7 @@ interface IHeroSectionProps {}
 const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
   return (
     <div className="relative">
-      <div className="relative top-0 w-full h-[460px] md:h-[1080px] z-0 ">
+      <div className="relative top-0 w-[390px] md:w-full h-[460px] md:h-[1080px] z-0 ">
         <Image
           src="/pintu.png"
           alt=""
@@ -18,8 +18,8 @@ const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
         <Image
           src="/herophoto2.png"
           alt=""
-          width={390}
-          height={460}
+          width={460}
+          height={660}
           className="block md:hidden"
         />
       </div>

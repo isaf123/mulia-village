@@ -39,7 +39,9 @@ export default function RootLayout({
         <div className="h-fit relative">
           <NavbarMobile />
           <NavbarDesktop />
-          <div className="max-w-[1920px] m-auto">{children}</div>
+          <div className="min-w-[390px] md:max-w-[1920px] m-auto">
+            {children}
+          </div>
         </div>
       </body>
     </html>
