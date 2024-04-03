@@ -10,16 +10,12 @@ import AboutUs from "@/view/AboutUs";
 import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
-
 import PureSyariah from "@/view/pure_syariah";
-
 import Contact from "@/view/Contact";
 
 import Image from "next/image";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
-
-
 
 export default function Home() {
   const [active, setActive] = useState<Boolean>();
@@ -28,7 +24,6 @@ export default function Home() {
     setActive(true);
   }, []);
   return (
-
     <div>
       {active ? (
         <div className="fixed  w-full h-full z-[9999]">
@@ -67,17 +62,15 @@ export default function Home() {
         <Fasilitas />
         <TypeRumah />
         <LegalitasTerjamin />
- 
+
         <TestimonialsCustomer />
-         <PureSyariah />
+        <PureSyariah />
 
         <Faq />
         <ManagedBy />
-           <Contact />
+        <Contact />
         <Footer />
       </div>
-
-
     </div>
   );
 }
