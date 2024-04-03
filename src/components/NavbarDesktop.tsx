@@ -2,11 +2,21 @@
 import * as React from "react";
 import Image from "next/image";
 import { RiCloseLine } from "react-icons/ri";
+import { eventGA } from "@/lib/gtag";
 
 interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
   const [active, setActive] = React.useState<Boolean>(false);
+  const [getData, setGetData] = React.useState<any>({
+    name: "",
+    email: "",
+    wa: "",
+    domicile: "",
+    type: "",
+    plan: "",
+  });
+
   return (
     <div className="fixed w-full hidden md:block top-0 z-[99]">
       <div className="h-[140px] flex justify-between py-3 relative opacity-[50%] bg-white z-20"></div>
@@ -52,35 +62,89 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Nama Lengkap"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    name: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
               <input
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="E-mail"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    email: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
               <input
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="No. Whatsapp"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    wa: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
               <input
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Kota Domisili"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    domicile: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
               <input
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Type Rumah"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    type: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
               <input
                 type="text"
                 className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Rencana Beli"
+                onChange={(element: any) => {
+                  const newData = {
+                    ...getData,
+                    plan: element.target.value,
+                  };
+                  setGetData(newData);
+                }}
               />
             </div>
             <div className="w-full h-fit flex justify-center mt-[40px]">
-              <button className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] ">
+              <button
+                onClick={() => {
+                  eventGA({
+                    action: "event_contactus_landing",
+                    category: "user_contact",
+                    label: `${getData.name}, ${getData.wa}`,
+                  });
+                  window.open(
+                    `https://wa.me/+6289644115873?text=🏠 *Halo ${getData.name}!* %0A%0A*Nama*: **${getData.name}**%0A*Email*: **${getData.email}**%0A*Nomor WhatsApp*: **${getData.wa}**%0A*Domisili*: **${getData.domicile}**%0A*Tipe*: **${getData.type}**%0A*Plan*: **${getData.plan}**%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
+                  );
+                }}
+                className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
+              >
                 <div className="md:w-[215px]">
                   Contact{" "}
                   <span className="font-playfair italic font-normal">Us</span>
