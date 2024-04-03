@@ -5,12 +5,8 @@ interface IHeroSectionProps {}
 
 const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
   return (
-    <div>
-
-
-      <div className="relative top-0 w-full h-[460px] md:h-[1080px] ">
-
-
+    <div className="relative">
+      <div className="relative top-0 w-full h-[460px] md:h-[1080px] z-0 ">
         <Image
           src="/pintu.png"
           alt=""
