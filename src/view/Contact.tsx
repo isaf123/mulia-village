@@ -7,7 +7,7 @@ interface IContactProps {}
 const Contact: React.FunctionComponent<IContactProps> = (props) => {
   return (
     <section className=" w-full h-fit bg-[#E9E9E9]">
-      <Divider1 children="CONTACT US" />
+      <Divider1>Contact Us</Divider1>
       <h1 className="mt-[61px] text-[10px] md:text-[30px] px-[30px] md:px-0 text-center text-color1">
         Kontak kami untuk mendapatkan promo, brosur, dan info menarik lainnya.
       </h1>
