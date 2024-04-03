@@ -35,10 +35,6 @@ const PureSyariah: React.FunctionComponent<IPureSyariahProps> = (props) => {
         Tanpa Bunga, Tanpa Riba, Tanpa Sita, Tanpa BI Checking, Tanpa Asuransi,
         Tanpa Akad Bathil, dan Tanpa Denda
       </article>
-      <button className="text-xs md:text-4xl w-[85px] h-[25px] transition duration-500 border border-color1 text-color1 hover:text-white hover:bg-color1 md:w-[312px] md:h-[90px] rounded-md md:rounded-lg absolute right-5 top-[235px] md:right-[100px] md:top-[800px]">
-        <b>Learn </b>
-        <i className="font-playfair">More</i>
-      </button>
     </section>
   );
 };
