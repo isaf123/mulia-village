@@ -11,7 +11,9 @@ import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
 
+
 import PureSyariah from "@/view/pure_syariah";
+
 
 import Contact from "@/view/Contact";
 
