@@ -7,7 +7,9 @@ const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
   return (
     <div>
 
+
       <div className="relative top-0 w-full h-[460px] md:h-[1080px] ">
+
 
         <Image
           src="/pintu.png"

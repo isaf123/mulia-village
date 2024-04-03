@@ -10,6 +10,7 @@ const Divider1: React.FunctionComponent<IDivider1Props> = (props) => {
 
 
 
+
       <p className="font-poppin text-[20px] md:text-[70px] text-color2 font-bold bg-color1 w-full flex-1 flex justify-end pr-2 h-[60px] md:h-[126px] items-center">
         {props.children.split(" ")[0]}
       </p>
@@ -18,8 +19,6 @@ const Divider1: React.FunctionComponent<IDivider1Props> = (props) => {
           <div className=" h-fit">{props.children.split(" ")[1]}</div>
         </div>
         <div className="bottom-0 right-0 w-[157px] md:w-[789px] border-color1 border-b-[2px] md:border-b-[6px] ml-10 md:ml-32 absolute"></div>
-
-
       </div>
     </div>
   );
