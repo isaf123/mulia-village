@@ -1,6 +1,8 @@
+"use client";
 import * as React from "react";
 import Image from "next/image";
 import { eventGA } from "@/lib/gtag";
+import { RiCloseLine } from "react-icons/ri";
 
 interface ICardTypeProps {
   children: string;
@@ -9,11 +11,46 @@ interface ICardTypeProps {
   bathroom: string;
   carport: string;
   src: string;
+  spek: string;
 }
 
 const CardType: React.FunctionComponent<ICardTypeProps> = (props) => {
+  const [active, setActive] = React.useState<Boolean>(false);
   return (
     <div className="h-fit w-[365px] md:w-[540px] rounded-[20px]">
+      {active ? (
+        <div className="w-full h-full z-[9999]">
+          <div
+            className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[62] left-0 top-0"
+            onClick={() => {
+              setActive(!active);
+            }}
+          ></div>
+          <Image
+            src={props.spek}
+            width={1420}
+            height={3400}
+            alt=""
+            className="absolute z-[63] md:right-[14%] hidden md:block"
+          />
+          <Image
+            src={props.spek}
+            width={360}
+            height={400}
+            alt=""
+            className="absolute z-[63] md:right-[14%] block md:hidden"
+          />
+          <RiCloseLine
+            className="absolute right-[8%] md:right-[15%] w-[34px] md:w-[70px] h-[34px] md:h-[70px] z-[209] cursor-pointer text-white"
+            onClick={() => {
+              setActive(!active);
+            }}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
+
       <Image
         src={props.src}
         alt=""
@@ -98,6 +135,7 @@ const CardType: React.FunctionComponent<ICardTypeProps> = (props) => {
         <div className="w-full h-fit flex justify-center mt-[24px]">
           <button
             onClick={() => {
+              setActive(!active);
               eventGA({
                 action: "event_click_landing",
                 category: "type_rumah",

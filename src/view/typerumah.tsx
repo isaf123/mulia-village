@@ -15,6 +15,7 @@ const TypeRumah: React.FunctionComponent<ITypeRumahProps> = (props) => {
           bedroom={val.bedroom}
           bathroom={val.bathroom}
           carport={val.carport}
+          spek={val.spek}
           key={idx}
         >
           {val.type}
@@ -37,7 +38,6 @@ const TypeRumah: React.FunctionComponent<ITypeRumahProps> = (props) => {
       </h3>
 
       <div className="flex flex-wrap w-[390px] md:w-[1900px] h-fit gap-10 md:gap-10 justify-center mt-[45px] md:mt-[70px]">
-
         {mapping()}
       </div>
     </div>

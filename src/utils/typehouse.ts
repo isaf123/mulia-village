@@ -6,6 +6,7 @@ const typeHouse = [
     bathroom: "1 Bathroom",
     carport: "2 Carport",
     src: "/gamal.jpg",
+    spek: "/spekgamal.png",
   },
   {
     type: "Ibtisaam",
@@ -14,6 +15,7 @@ const typeHouse = [
     bathroom: "1 Bathroom",
     carport: "2 Carport",
     src: "/Ibtisaam.jpg",
+    spek: "/spekibtisam.png",
   },
   {
     type: "Kafeel",
@@ -22,6 +24,7 @@ const typeHouse = [
     bathroom: "2 Bathroom",
     carport: "2 Carport",
     src: "/Kafeel.jpg",
+    spek: "/spekkafeel.png",
   },
   {
     type: "Mahdiy",
@@ -30,6 +33,7 @@ const typeHouse = [
     bathroom: "2 Bathroom",
     carport: "2 Carport",
     src: "/Mahdiy.png",
+    spek: "/spekmahdiy.png",
   },
   {
     type: "Pahlevi",
@@ -38,6 +42,7 @@ const typeHouse = [
     bathroom: "2 Bathroom",
     carport: "2 Carport",
     src: "/Pahlevi.jpg",
+    spek: "/spekpahlevi.png",
   },
 ];
 
