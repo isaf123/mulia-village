@@ -10,6 +10,7 @@ interface ICustomer {
   job: string;
   testimony1a: string;
   testimony1b: string;
+  mobileimage: string;
 }
 
 interface ITestimonialsCustomerProps {}
@@ -34,6 +35,7 @@ const TestimonialsCustomer: React.FunctionComponent<
     {
       id: 1,
       image: "customer1.jpg",
+      mobileimage: "mobile-customer1.png",
       name: "Bp. Mujiburrahman",
       job: "Pendiri Rumah Tahfidz Athfaaluna",
       testimony1a:
@@ -43,6 +45,7 @@ const TestimonialsCustomer: React.FunctionComponent<
     {
       id: 2,
       image: "customer2.jpg",
+      mobileimage: "mobile-customer2.png",
       name: "Dr. Erni",
       job: "Dokter",
       testimony1a: "",
@@ -52,6 +55,7 @@ const TestimonialsCustomer: React.FunctionComponent<
     {
       id: 3,
       image: "customer3.jpg",
+      mobileimage: "mobile-customer3.png",
       name: "Aprilia Pretyany",
       job: "Karyawan Angkasa Pura",
       testimony1a:
@@ -62,6 +66,7 @@ const TestimonialsCustomer: React.FunctionComponent<
     {
       id: 4,
       image: "customer4.jpg",
+      mobileimage: "mobile-customer4.png",
       name: "Adhi Utama",
       job: "Specialist IT",
       testimony1a: "Tertarik ambil karena",
@@ -144,10 +149,39 @@ const TestimonialsCustomer: React.FunctionComponent<
       </div>
       {/* mobile version */}
       <div className="flex flex-col justify-center items-center space-y-8 md:hidden">
-        <img src="Frame1.png" alt="testi1" className="w-[273px]" />
-        <img src="Frame2.png" alt="testi2" className="w-[273px]" />
-        <img src="Frame3.png" alt="testi3" className="w-[273px]" />
-        <img src="Frame4.png" alt="testi4" className="w-[273px]" />
+        {customers.map((customer: ICustomer, idx) => (
+          <div className="w-[273px] h-[544px] bg-white relative rounded-md justify-center text-center">
+            <img
+              src={customer.mobileimage}
+              className="w-full rounded-l-lg object-cover"
+            />
+            <p className="text-xs px-5 text-justify pt-5">
+              <b className="text-xs">&ldquo;</b>
+              {customer.testimony1a}
+              <span className="font-bold text-color1 text-xs">
+                {keywordsGreen[idx]}
+              </span>
+              <span className="font-bold text-color2  text-xs font-playfair italic">
+                {keywordsYellow[idx]}
+              </span>
+              {customer.testimony1b}
+              <b className="text-xs">&ldquo;</b>
+            </p>
+
+            <div className="absolute bottom-14 w-full space-y-1 ">
+              <div className="w-[1rem] h-[1px] bg-color1  mx-auto" />
+              <h1 className="text-xs font-bold">{customer.name}</h1>
+              <h1 className="text-xs font-bold">{customer.job}</h1>
+            </div>
+            <div className="absolute bottom-0 w-full bg-color1 h-[36px] rounded-b-lg">
+              <img
+                src="logowhite.png"
+                alt="logo"
+                className="w-[30px] h-[30px] absolute right-0"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
