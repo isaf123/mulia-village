@@ -6,12 +6,13 @@ const PureSyariah: React.FunctionComponent<IPureSyariahProps> = (props) => {
   return (
     <section className="relative w-[390px] md:w-full mt-10">
       <img
-        id="image-for-desktop"
+        id="image-for-mobile"
         src="syariah2.webp"
         alt="syariah"
         className="w-[390px] block md:hidden"
       />
       <img
+        id="image-for-desktop"
         src="syariah.webp"
         alt="syariah"
         className="w-full hidden md:block"
@@ -25,7 +26,7 @@ const PureSyariah: React.FunctionComponent<IPureSyariahProps> = (props) => {
           Menambah Keberkahan
         </h1>
       </div>
-      <div className="bg-color1 w-[150px] md:w-[561px] h-[2px] md:h-[6px] absolute top-[85px] left-[300px] md:left-[1359px] md:top-[330px] text-7xl"></div>
+      <div className="bg-color1 w-[140px] md:w-[561px] h-[2px] md:h-[6px] absolute top-[85px] left-[250px] md:left-[1359px] md:top-[330px] text-7xl"></div>
       <article className="absolute top-[102px] text-color1 font-semibold md:top-[500px] md:right-0 right-[20px] w-[117px] md:w-[580px] text-[10px] leading-tight md:text-3xl md:mr-20 text-right">
         Lebih aman & berkah proses pembeliannya dengan skema syariah dan 7 Tanpa
         : <br />
