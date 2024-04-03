@@ -79,7 +79,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               scrolling="no"
               src="https://maps.google.com/maps?width=650&amp;height=797&amp;hl=en&amp;q=Jl.%20Mbah%20Nanggul,%20Cemandi,%20Kec.%20Sedati,%20Kabupaten%20Sidoarjo,%20Jawa%20Timur%2061253+(Mulia%20Village)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             >
-              <a href="https://www.gps.ie/">gps vehicle tracker</a>
+              {/* <a href="https://www.gps.ie/">gps vehicle tracker</a> */}
             </iframe>
           </div>
         </div>
