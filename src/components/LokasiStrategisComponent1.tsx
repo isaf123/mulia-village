@@ -8,7 +8,7 @@ const LokasiStrategisComponent1: React.FunctionComponent<
   ILokasiStrategisComponent1Props
 > = (props) => {
   return (
-    <section className="mb-[5rem] md:mb-[10rem] mt-[2rem] md:mt-[7rem]">
+    <section className="mb-[5rem] md:mb-[10rem] mt-[40px] md:mt-[7rem]">
       {/* desktop version */}
       <div className="hidden justify-end md:flex">
         <div id="itskampus">

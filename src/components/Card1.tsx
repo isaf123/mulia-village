@@ -31,7 +31,7 @@ const Card1: React.FunctionComponent<ICard1Props> = (props) => {
         {props.title}
       </h1>
 
-      <div className="md:absolute md:bottom-16 static text-center w-full text-xs md:text-3xl tracking-tight md:tracking-normal ">
+      <div className="md:absolute md:bottom-16 static text-center w-full text-[10px] leading-4 md:text-3xl tracking-tight md:tracking-normal ">
         <h1 className="mx-auto">{props.number}</h1>
         <h1 className="mx-auto">{props.date}</h1>
       </div>
