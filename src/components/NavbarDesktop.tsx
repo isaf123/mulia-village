@@ -22,6 +22,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
           <p className="hover:font-bold cursor-pointer w-fit">Product</p>
         </div>
       </div>
+      <a href=""></a>
 
       {active ? (
         <div className="relative w-[600px] h-[742.5px] left-[35%]">

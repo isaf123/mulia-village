@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import { eventGA } from "@/lib/gtag";
 
 interface ICardTypeProps {
   children: string;
@@ -96,6 +97,13 @@ const CardType: React.FunctionComponent<ICardTypeProps> = (props) => {
         </div>
         <div className="w-full h-fit flex justify-center mt-[24px]">
           <button
+            onClick={() => {
+              eventGA({
+                action: "event_click_landing",
+                category: "type_rumah",
+                label: props.children,
+              });
+            }}
             className="
           text-[14px] md:text-[24px] border-[0.6px] md:border-[2px]
          border-color1 text-color1 font-playfair italic
