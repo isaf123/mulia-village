@@ -19,8 +19,6 @@ import Image from "next/image";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
 
-
-
 export default function Home() {
   const [active, setActive] = useState<Boolean>();
 
@@ -28,14 +26,13 @@ export default function Home() {
     setActive(true);
   }, []);
   return (
-
     <div>
       {active ? (
         <div className="fixed  w-full h-full z-[9999]">
           <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
 
           <IoMdCloseCircleOutline
-            className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[63%] top-16 md:top-20"
+            className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[61%] top-[90px] md:top-32"
             onClick={() => {
               setActive(!active);
             }}
@@ -67,17 +64,13 @@ export default function Home() {
         <Fasilitas />
         <TypeRumah />
         <LegalitasTerjamin />
- 
         <TestimonialsCustomer />
-         <PureSyariah />
-
+        <PureSyariah />
         <Faq />
         <ManagedBy />
-           <Contact />
+        <Contact />
         <Footer />
       </div>
-
-
     </div>
   );
 }
