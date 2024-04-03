@@ -6,7 +6,7 @@ interface IFaqProps {}
 
 const Faq: React.FunctionComponent<IFaqProps> = (props) => {
   return (
-    <section className="bg-[#E9E9E9] w-full h-[540px] md:h-[2500px] overflow-hidden  ">
+    <section className="bg-[#E9E9E9] w-full h-fit overflow-hidden  ">
       <div className=" w-full h-fit md:h-[213px] ">
         <h1 className=" font-poppins text-color2 text-[20px] md:text-[100px] bg-color1 px-[51px] md:px-[204px] py-[13px] md:py-[32px] font-semibold">
           FAQs
