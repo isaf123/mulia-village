@@ -1,11 +1,13 @@
 import CardFasilitas from "@/components/CardFasilitas";
+import Divider1 from "@/components/Divider1";
 import * as React from "react";
 
 interface IFasilitasProps {}
 
 const Fasilitas: React.FunctionComponent<IFasilitasProps> = (props) => {
   return (
-    <section className=" w-full h-fit md:h-[1629px] bg-[#E9E9E9]">
+    <section className=" w-full h-fit md:h-[1629px] bg-[#E9E9E9] mt-10">
+      <Divider1>Fasilitas Lengkap</Divider1>
       <h1 className="pt-[27px] md:pt-[119px] mx-[30px] md:mx-[227px] text-[12px] md:text-[24px]  text-center text-color1  ">
         Mulia Village menghadirkan fasilitas unggulan: rumah tahfidz untuk
         mendalami Al-Quran, masjid sebagai pusat kegiatan spiritual, area
