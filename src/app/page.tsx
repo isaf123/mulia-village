@@ -15,39 +15,59 @@ import Contact from "@/view/Contact";
 import Image from "next/image";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
+import { getBlogPosts } from "@/utils/contentful";
 
 export default function Home() {
   const [active1, setActive1] = useState<Boolean>();
+  const [getData, setGetData] = useState<any[]>([]);
 
   useEffect(() => {
     setActive1(true);
+    getPhotos();
   }, []);
+
+  const getPhotos = async () => {
+    try {
+      const response = await getBlogPosts();
+      setGetData(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log("daoet data", getData);
+  console.log(getData[0]?.updatepromo.fields.file.url);
   return (
     <div>
       {active1 ? (
         <div className="fixed  w-full h-full z-[999]">
-          <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
+          <div
+            className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"
+            onClick={() => {
+              setActive1(!active1);
+            }}
+          ></div>
 
-          <IoMdCloseCircleOutline
-            className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[61%] top-[90px] md:top-32"
+          <img
+            src={getData[0]?.updatepromo.fields.file.url}
+            alt=""
+            width={700}
+            height={700}
+            className="absolute z-[39] left-[35.3%] top-[10%] hidden md:block"
             onClick={() => {
               setActive1(!active1);
             }}
           />
 
-          <Image
-            src={"/popup.png"}
-            alt=""
-            width={600}
-            height={600}
-            className="absolute z-[39] left-[35.3%] top-[10%] hidden md:block"
-          />
-          <Image
-            src={"/popup.png"}
+          <img
+            src={getData[0]?.updatepromo.fields.file.url}
             alt=""
             width={400}
             height={400}
             className="absolute z-[39] left-[3%] top-[10%] block md:hidden"
+            onClick={() => {
+              setActive1(!active1);
+            }}
           />
         </div>
       ) : (

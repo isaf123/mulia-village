@@ -2,10 +2,12 @@ import * as React from "react";
 import Inputan from "@/components/inputContact";
 import Divider1 from "@/components/Divider1";
 import { eventGA } from "@/lib/gtag";
+import { IoAlertCircle } from "react-icons/io5";
 
 interface IContactProps {}
 
 const Contact: React.FunctionComponent<IContactProps> = (props) => {
+  const [activeAlert, setActiveAlert] = React.useState<Boolean>(false);
   const [getData, setGetData] = React.useState<any>({
     name: "",
     email: "",
@@ -121,23 +123,49 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               <option value="belum-tahu">Belum tahu</option>
               <option value="waktu-dekat">Dalam waktu dekat</option>
             </select>
-            <div className=" flex justify-center">
-              <button
-                className="mb-0 md:mb-[211px] mt-[40px] md:mt-[132px] w-[280px] md:w-[515px] h-[50px] md:h-[80px] bg-color1 rounded-[10px] md:rounded-[20px] text-[10px] md:text-[30px] text-[#E9E9E9] font-semibold"
+
+            <div className="w-full h-[16px]  mt-3">
+              {activeAlert ? (
+                <div className="flex justify-center items-center  gap-2">
+                  <IoAlertCircle className="text-red-600 w-[24px] h-[24px]" />
+                  <p className="text-lg text-red-600  w-fit font-medium ">
+                    Invalid, please fill all data !
+                  </p>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+
+            <div className=" flex justify-center cursor-pointer ">
+              <div
+                className="flex items-center justify-center mb-0 md:mb-[211px] mt-[40px] md:mt-[28px] w-[280px] md:w-[515px] h-[50px] md:h-[80px] bg-color1 rounded-[10px] md:rounded-[20px] text-[10px] md:text-[30px] text-[#E9E9E9] font-semibold"
                 onClick={() => {
                   eventGA({
                     action: "event_contactus_landing",
                     category: "user_contact",
                     label: `${getData.name}, ${getData.wa}`,
                   });
-                  window.open(
-                    `https://wa.me/+6289644115873?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
-                  );
+                  {
+                    !Object.values(getData).includes("")
+                      ? window.open(
+                          `https://wa.me/+6289644115873?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
+                        )
+                      : setActiveAlert(true);
+                  }
+
+                  {
+                    !Object.values(getData).includes("")
+                      ? setActiveAlert(false)
+                      : setActiveAlert(true);
+                  }
                 }}
               >
-                CONTACT{" "}
-                <span className=" font-normal font-playfair italic">US</span>
-              </button>
+                <p>
+                  CONTACT{" "}
+                  <span className=" font-normal font-playfair italic">US</span>
+                </p>
+              </div>
             </div>
           </div>
         </form>
