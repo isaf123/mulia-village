@@ -4,12 +4,14 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLine } from "react-icons/ri";
 import { eventGA } from "@/lib/gtag";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 interface INavbarMobileProps {}
 
 const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
   const [activeNav, setActivenav] = React.useState<Boolean>(false);
   const [active, setActive] = React.useState<Boolean>(false);
+  const [activeSite, setActiveSite] = React.useState<Boolean>(false);
   const [getData, setGetData] = React.useState<any>({
     name: "",
     email: "",
@@ -57,6 +59,37 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
           <p className="border-b-gray-300  border-b-[0.1px] border-t-gray-300  border-t-[0.1px] py-2 text-[14px] font-medium">
             Product
           </p>
+          <p
+            className="border-b-gray-300  border-b-[0.1px] border-t-gray-300  border-t-[0.1px] py-2 text-[14px] font-medium"
+            onClick={() => {
+              setActiveSite(!activeSite);
+            }}
+          >
+            Site Plan
+          </p>
+        </div>
+      ) : (
+        <></>
+      )}
+
+      {activeSite ? (
+        <div className="fixed  w-full h-full z-[999]">
+          <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
+
+          <IoMdCloseCircleOutline
+            className="absolute z-[402] text-black w-[42px]  h-[42px]  cursor-pointer left-[84%] md:left-[68%] top-[71px]"
+            onClick={() => {
+              setActiveSite(!activeSite);
+            }}
+          />
+
+          <Image
+            src={"/siteplan.png"}
+            alt=""
+            width={350}
+            height={350}
+            className="absolute z-[319] top-20 left-5"
+          />
         </div>
       ) : (
         <></>
@@ -186,7 +219,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                   });
                 }}
                 className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
-                href="https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊"
+                href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
               >
                 <div className="md:w-[215px]">
                   Contact{" "}
