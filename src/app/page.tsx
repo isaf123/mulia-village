@@ -20,21 +20,21 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [active, setActive] = useState<Boolean>();
+  const [active1, setActive1] = useState<Boolean>();
 
   useEffect(() => {
-    setActive(true);
+    setActive1(true);
   }, []);
   return (
     <div>
-      {active ? (
-        <div className="fixed  w-full h-full z-[9999]">
+      {active1 ? (
+        <div className="fixed  w-full h-full z-[999]">
           <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
 
           <IoMdCloseCircleOutline
             className="absolute z-[40] text-color2 w-[45px] md:w-[65px] h-[45px] md:h-[65px] cursor-pointer left-[84%] md:left-[61%] top-[90px] md:top-32"
             onClick={() => {
-              setActive(!active);
+              setActive1(!active1);
             }}
           />
 

@@ -21,7 +21,7 @@ const CardType: React.FunctionComponent<ICardTypeProps> = (props) => {
       {active ? (
         <div className="w-full h-full z-[9999]">
           <div
-            className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[62] left-0 top-0"
+            className="absolute bg-black min-w-[390px] w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[62] left-0 top-0"
             onClick={() => {
               setActive(!active);
             }}
@@ -143,10 +143,10 @@ const CardType: React.FunctionComponent<ICardTypeProps> = (props) => {
               });
             }}
             className="
-          text-[14px] md:text-[24px] border-[0.6px] md:border-[2px]
-         border-color1 text-color1 font-playfair italic
-         rounded-[6px] md:rounded-[20px] p-[6px] w-[180px] md:w-[320px]
-         md:py-[10px] md:px-[40px] hover:bg-color1 hover:text-[#E9E9E9] transition duration-180 ease-in"
+              text-[14px] md:text-[24px] border-[0.6px] md:border-[2px]
+            border-color1 text-color1 font-playfair italic
+              rounded-[6px] md:rounded-[20px] p-[6px] w-[180px] md:w-[320px]
+              md:py-[10px] md:px-[40px] hover:bg-color1 hover:text-[#E9E9E9] transition duration-180 ease-in"
           >
             <div>
               View{" "}
