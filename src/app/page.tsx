@@ -10,11 +10,8 @@ import AboutUs from "@/view/AboutUs";
 import LegalitasTerjamin from "@/view/legalitas_terjamin";
 import TypeRumah from "@/view/typerumah";
 import TestimonialsCustomer from "@/view/testimonials_customer";
-
 import PureSyariah from "@/view/pure_syariah";
-
 import Contact from "@/view/Contact";
-
 import Image from "next/image";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
