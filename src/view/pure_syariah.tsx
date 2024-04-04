@@ -17,7 +17,7 @@ const PureSyariah: React.FunctionComponent<IPureSyariahProps> = (props) => {
         alt="syariah"
         className="w-full hidden md:block"
       />
-      <div className="absolute top-[25px] right-[42px] md:top-[80px] md:right-[200px] ">
+      <div className="absolute top-[25px] right-[25px] md:top-[80px] md:right-[200px] ">
         <h1 className="text-color2 text-lg md:text-7xl font-bold md:mb-6">
           Pure Syariah
         </h1>
