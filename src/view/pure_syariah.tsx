@@ -17,12 +17,12 @@ const PureSyariah: React.FunctionComponent<IPureSyariahProps> = (props) => {
         alt="syariah"
         className="w-full hidden md:block"
       />
-      <div className="absolute w-[200px] top-[25px] right-0 md:top-[80px] md:right-[200px] ">
+      <div className="absolute w-[210px] md:w-auto top-[27px] right-0 md:top-[80px] md:right-[200px]">
         <h1 className="text-color2 text-lg md:text-7xl font-bold md:mb-6">
           Pure Syariah
         </h1>
         <div className="bg-color1 w-[125px] md:w-[520px] h-[2px] md:h-[6px] md:mb-8" />
-        <h1 className="text-color1 font-playfair italic text-lg md:text-7xl font-bold md:ml-40">
+        <h1 className="text-color1 font-playfair tracking-tight md:tracking-normal italic text-[16px] md:text-7xl font-bold md:ml-40">
           Menambah Keberkahan
         </h1>
       </div>
