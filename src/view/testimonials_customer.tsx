@@ -102,8 +102,8 @@ const TestimonialsCustomer: React.FunctionComponent<
           itemClass="carousel-item-padding-40-px"
           className="flex w-full"
         >
-          {customers.map((customer: ICustomer, idx) => (
-            <div key={customer.id}>
+          {customers.map((customer: ICustomer, idx: number) => (
+            <div key={idx}>
               <div className={`h-[852px] flex rounded-lg shadow-xl`}>
                 <img
                   src={customer.image}
@@ -149,8 +149,11 @@ const TestimonialsCustomer: React.FunctionComponent<
       </div>
       {/* mobile version */}
       <div className="flex flex-col justify-center items-center space-y-8 md:hidden">
-        {customers.map((customer: ICustomer, idx) => (
-          <div className="w-[273px] h-[544px] bg-white relative rounded-md justify-center text-center">
+        {customers.map((customer: ICustomer, idx: number) => (
+          <div
+            key={idx}
+            className="w-[273px] h-[544px] bg-white relative rounded-md justify-center text-center"
+          >
             <img
               src={customer.mobileimage}
               className="w-full rounded-l-lg object-cover"
