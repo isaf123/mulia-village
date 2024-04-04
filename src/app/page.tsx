@@ -55,19 +55,25 @@ export default function Home() {
       )}
 
       <div className="bg-[#E9E9E9]">
-        <HeroSection />
-        <AboutUs />
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="aboutus">
+          <AboutUs />
+        </section>
         <LokasiStrategis />
         <Fasilitas />
-        <TypeRumah />
+        <section id="product">
+          <TypeRumah />
+        </section>
         <LegalitasTerjamin />
-
         <TestimonialsCustomer />
         <PureSyariah />
-
         <Faq />
         <ManagedBy />
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
         <Footer />
       </div>
     </div>

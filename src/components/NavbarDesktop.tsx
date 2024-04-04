@@ -4,12 +4,15 @@ import Image from "next/image";
 import { RiCloseLine } from "react-icons/ri";
 import { eventGA } from "@/lib/gtag";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { Link } from "react-scroll";
+import { IoAlertCircle } from "react-icons/io5";
 
 interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
   const [active, setActive] = React.useState<Boolean>(false);
   const [activeSite, setActiveSite] = React.useState<Boolean>(false);
+  const [activeAlert, setActiveAlert] = React.useState<Boolean>(false);
   const [getData, setGetData] = React.useState<any>({
     name: "",
     email: "",
@@ -28,10 +31,40 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
           className="text-lg text-color1 flex gap-20  items-center text-[25px]
         "
         >
-          <p className="hover:font-bold cursor-pointer w-fit">Home</p>
-          <p className="hover:font-bold cursor-pointer w-fit">About Us</p>
-          <p className="hover:font-bold cursor-pointer w-fit">Contact</p>
-          <p className="hover:font-bold cursor-pointer w-fit">Product</p>
+          <Link
+            to="home"
+            smooth={true}
+            duration={2500}
+            className="hover:font-bold cursor-pointer w-fit"
+          >
+            Home
+          </Link>
+
+          <Link
+            to="aboutus"
+            smooth={true}
+            duration={2500}
+            className="hover:font-bold cursor-pointer w-fit"
+          >
+            About Us
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={2500}
+            className="hover:font-bold cursor-pointer w-fit"
+          >
+            Contact
+          </Link>
+          <Link
+            to="product"
+            smooth={true}
+            duration={2500}
+            className="hover:font-bold cursor-pointer w-fit"
+          >
+            Product
+          </Link>
+
           <p
             className="hover:font-bold cursor-pointer w-fit"
             onClick={() => {
@@ -184,18 +217,40 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                 <option value="waktu-dekat">Dalam waktu dekat</option>
               </select>
             </div>
-
-            <div className="w-full h-fit flex justify-center mt-[40px]">
+            <div className="w-full h-[50px] pt-[10px]">
+              {activeAlert ? (
+                <div className="flex justify-center items-center  gap-2">
+                  <IoAlertCircle className="text-red-600 w-[24px] h-[24px]" />
+                  <p className="text-sm text-red-600  w-fit font-medium ">
+                    Invalid, please fill all data !
+                  </p>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="w-full h-fit flex justify-center ">
               <button
                 onClick={() => {
+                  console.log(Object.values(getData).includes(""));
                   eventGA({
                     action: "event_contactus_landing",
                     category: "user_contact",
                     label: `${getData.name}, ${getData.wa}`,
                   });
-                  window.open(
-                    `https://wa.me/+6289644115873?text=🏠 *Halo ${getData.name}!* %0A%0A*Nama*: **${getData.name}**%0A*Email*: **${getData.email}**%0A*Nomor WhatsApp*: **${getData.wa}**%0A*Domisili*: **${getData.domicile}**%0A*Tipe*: **${getData.type}**%0A*Plan*: **${getData.plan}**%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
-                  );
+                  {
+                    !Object.values(getData).includes("")
+                      ? window.open(
+                          `https://wa.me/+6289644115873?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
+                        )
+                      : setActiveAlert(true);
+                  }
+
+                  {
+                    !Object.values(getData).includes("")
+                      ? setActiveAlert(false)
+                      : setActiveAlert(true);
+                  }
                 }}
                 className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
               >
