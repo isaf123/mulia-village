@@ -6,7 +6,7 @@ import { eventGA } from "@/lib/gtag";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { Link } from "react-scroll";
 import { IoAlertCircle } from "react-icons/io5";
-
+import { useEffect } from "react";
 interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
@@ -23,7 +23,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
   });
 
   return (
-    <div className="fixed w-full hidden md:block top-0 z-[99]">
+    <div className="fixed w-full hidden md:block top-0 z-[99] overflow-y-scroll">
       <div className="h-[140px] flex justify-between py-3 relative opacity-[50%] bg-white z-20"></div>
       <div className="absolute top-0 z-50 flex justify-between items-center w-full h-[140px] px-[30px]">
         <Image src={"/logo-muliavillage.png"} alt="" width={120} height={120} />
@@ -78,7 +78,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
       <a href=""></a>
 
       {activeSite ? (
-        <div className="fixed  w-full h-full z-[999]">
+        <div className="fixed w-full h-full z-[999]">
           <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
 
           <IoMdCloseCircleOutline
