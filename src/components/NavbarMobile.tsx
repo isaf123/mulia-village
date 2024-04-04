@@ -5,7 +5,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLine } from "react-icons/ri";
 import { eventGA } from "@/lib/gtag";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+
 import { IoAlertCircle } from "react-icons/io5";
+
 
 interface INavbarMobileProps {}
 
@@ -248,7 +250,9 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                   }
                 }}
                 className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
+
                 // href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
+        
               >
                 <div className="md:w-[215px]">
                   Contact{" "}
