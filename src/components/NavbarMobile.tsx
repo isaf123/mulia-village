@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLine } from "react-icons/ri";
 import { eventGA } from "@/lib/gtag";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { IoAlertCircle } from "react-icons/io5";
 
 interface INavbarMobileProps {}
 
@@ -12,6 +13,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
   const [activeNav, setActivenav] = React.useState<Boolean>(false);
   const [active, setActive] = React.useState<Boolean>(false);
   const [activeSite, setActiveSite] = React.useState<Boolean>(false);
+  const [activeAlert, setActiveAlert] = React.useState<Boolean>(false);
   const [getData, setGetData] = React.useState<any>({
     name: "",
     email: "",
@@ -208,8 +210,22 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                 <option value="waktu-dekat">Dalam waktu dekat</option>
               </select>
             </div>
+            <div className="w-full h-[33px] mt-5">
+              {activeAlert ? (
+                <div className="w-fit h-[30px] m-auto px-[8px] py-1 rounded-2xl bg-gray-100 opacity-70">
+                  <div className="flex justify-center items-center gap-2">
+                    <IoAlertCircle className="text-red-600 w-[24px] h-[24px]" />
+                    <p className="text-sm text-red-600  w-fit font-medium ">
+                      Invalid, please fill all data !
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
 
-            <div className=" h-fit flex justify-center mt-[20px] cursor-pointer">
+            <div className=" h-fit flex justify-center mt-[10px] cursor-pointer">
               <a
                 onClick={() => {
                   eventGA({
@@ -217,9 +233,22 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                     category: "user_contact",
                     label: `${getData.name}, ${getData.wa}`,
                   });
+                  {
+                    !Object.values(getData).includes("")
+                      ? window.open(
+                          `https://wa.me/+6289644115873?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
+                        )
+                      : setActiveAlert(true);
+                  }
+
+                  {
+                    !Object.values(getData).includes("")
+                      ? setActiveAlert(false)
+                      : setActiveAlert(true);
+                  }
                 }}
                 className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
-                href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
+                // href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
               >
                 <div className="md:w-[215px]">
                   Contact{" "}
