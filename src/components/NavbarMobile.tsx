@@ -112,24 +112,25 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
           <div className="absolute bg-black min-w-[390px] w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[62] left-0 top-0"></div>
           <div className="w-full  h-[20px]"></div>
           <RiCloseLine
-            className="absolute top-10 right-0 w-[40px] h-[40px] z-[209] cursor-pointer text-white"
+            className="absolute top-10 right-5 w-[35px] h-[35px] z-[209] cursor-pointer text-white"
             onClick={() => {
               setActive(!active);
+              setActiveAlert(false);
             }}
           />
 
-          <div className="absolute z-[99] left-[7%]">
+          <div className="absolute z-[99] left-[7%] top-10">
             <Image
               src={"/logowhite.png"}
               alt=""
-              width={90}
-              height={90}
+              width={65}
+              height={65}
               className="m-auto "
             />
             <div className="flex flex-col gap-4 items-center h-fit justify-center mt-[37px]">
               <input
                 type="text"
-                className="w-[340px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Nama Lengkap"
                 onChange={(element: any) => {
                   const newData = {
@@ -141,7 +142,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               />
               <input
                 type="text"
-                className="w-[340px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="E-mail"
                 onChange={(element: any) => {
                   const newData = {
@@ -153,7 +154,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               />
               <input
                 type="text"
-                className="w-[340px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="No. Whatsapp"
                 onChange={(element: any) => {
                   const newData = {
@@ -165,7 +166,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               />
               <input
                 type="text"
-                className="w-[340px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 placeholder="Kota Domisili"
                 onChange={(element: any) => {
                   const newData = {
@@ -179,7 +180,8 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               <select
                 id="type-rumah"
                 name="type-rumah"
-                className=" w-[340px]  h-[50px] text-gray-400 px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                // className=" w-[340px]  h-[50px] text-gray-400 px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 onChange={(element: any) => {
                   const newData = {
                     ...getData,
@@ -203,7 +205,8 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               <select
                 id="type-rumah"
                 name="type-rumah"
-                className=" w-[340px]  h-[50px] text-gray-400  px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                className="w-[340px] h-[40px] text-[10px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
+                // className=" w-[340px]  h-[50px] text-gray-400  px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 onChange={(element: any) => {
                   const newData = {
                     ...getData,
@@ -225,7 +228,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                 <div className="w-fit h-[30px] m-auto px-[8px] py-1 rounded-2xl bg-gray-100 opacity-70">
                   <div className="flex justify-center items-center gap-2">
                     <IoAlertCircle className="text-red-600 w-[24px] h-[24px]" />
-                    <p className="text-sm text-red-600  w-fit font-medium ">
+                    <p className="text-[10px] text-red-600  w-fit font-medium ">
                       Invalid, please fill all data !
                     </p>
                   </div>
@@ -235,7 +238,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
               )}
             </div>
 
-            <div className=" h-fit flex justify-center mt-[10px] cursor-pointer">
+            <div className=" h-fit flex text-[10px] justify-center mt-[10px] cursor-pointer">
               <a
                 onClick={() => {
                   eventGA({
@@ -257,13 +260,12 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                       : setActiveAlert(true);
                   }
                 }}
-                className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
+                className=" text-[16px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
 
                 // href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
               >
                 <div className="md:w-[215px]">
-                  Contact{" "}
-                  <span className="font-playfair italic font-normal">Us</span>
+                  Contact <span className="font-playfair italic ">Us</span>
                 </div>
               </a>
             </div>

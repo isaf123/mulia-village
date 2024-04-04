@@ -106,6 +106,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
             className="absolute top-10 right-10 w-[40px] h-[40px] z-[209] cursor-pointer text-white"
             onClick={() => {
               setActive(!active);
+              setActiveAlert(false);
             }}
           />
           <Image

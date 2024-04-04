@@ -26,7 +26,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
         <form action="" className="">
           <div className=" flex flex-col ml-[15px]  md:ml-[178px] mt-[30px] md:mt-[86px] flex-1">
             <input
-              className="w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className="w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               type="text"
               placeholder="Nama Lengkap"
               onChange={(element: any) => {
@@ -38,7 +38,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               }}
             />
             <input
-              className=" mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className=" mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               type="text"
               placeholder="E-mail"
               onChange={(element: any) => {
@@ -50,7 +50,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               }}
             />
             <input
-              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               type="text"
               placeholder="No. Whatsapp"
               onChange={(element: any) => {
@@ -62,7 +62,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               }}
             />
             <input
-              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               type="text"
               placeholder="Kota Domisili"
               onChange={(element: any) => {
@@ -76,7 +76,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
             <select
               id="type-rumah"
               name="type-rumah"
-              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               //   value={fromStation}
               //   onChange={(e) => setFromStation(e.target.value)}
               onChange={(element: any) => {
@@ -92,7 +92,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
                 disabled
                 selected
                 hidden
-                className="text-gray-300"
+                className="text-gray-300 "
               >
                 Type Rumah
               </option>
@@ -105,7 +105,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
             <select
               id="rencana-beli"
               name="rencana-beli"
-              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
+              className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1 bg-[#E9E9E9]"
               //   value={fromStation}
               //   onChange={(e) => setFromStation(e.target.value)}
               onChange={(element: any) => {
@@ -128,7 +128,7 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               {activeAlert ? (
                 <div className="flex justify-center items-center  gap-2">
                   <IoAlertCircle className="text-red-600 w-[24px] h-[24px]" />
-                  <p className="text-lg text-red-600  w-fit font-medium ">
+                  <p className="text-[12px] md:text-[20px] text-red-600  w-fit font-medium ">
                     Invalid, please fill all data !
                   </p>
                 </div>
