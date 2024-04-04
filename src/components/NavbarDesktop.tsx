@@ -3,11 +3,13 @@ import * as React from "react";
 import Image from "next/image";
 import { RiCloseLine } from "react-icons/ri";
 import { eventGA } from "@/lib/gtag";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
   const [active, setActive] = React.useState<Boolean>(false);
+  const [activeSite, setActiveSite] = React.useState<Boolean>(false);
   const [getData, setGetData] = React.useState<any>({
     name: "",
     email: "",
@@ -30,9 +32,40 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
           <p className="hover:font-bold cursor-pointer w-fit">About Us</p>
           <p className="hover:font-bold cursor-pointer w-fit">Contact</p>
           <p className="hover:font-bold cursor-pointer w-fit">Product</p>
+          <p
+            className="hover:font-bold cursor-pointer w-fit"
+            onClick={() => {
+              setActiveSite(!activeSite);
+            }}
+          >
+            Site Plan
+          </p>
         </div>
       </div>
       <a href=""></a>
+
+      {activeSite ? (
+        <div className="fixed  w-full h-full z-[999]">
+          <div className="absolute bg-black w-full h-full bg-opacity-50 backdrop-filter backdrop-blur-sm z-[36]"></div>
+
+          <IoMdCloseCircleOutline
+            className="absolute z-[40] text-color2 w-[42px]  h-[42px]  cursor-pointer left-[84%] md:left-[68%] top-0"
+            onClick={() => {
+              setActiveSite(!activeSite);
+            }}
+          />
+
+          <Image
+            src={"/siteplan.png"}
+            alt=""
+            width={800}
+            height={800}
+            className="absolute z-[39] left-[30%]  hidden md:block top-0"
+          />
+        </div>
+      ) : (
+        <></>
+      )}
 
       {active ? (
         <div className="relative w-[600px] h-[742.5px] left-[35%]">
@@ -106,10 +139,11 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                   setGetData(newData);
                 }}
               />
-              <input
-                type="text"
-                className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
-                placeholder="Type Rumah"
+
+              <select
+                id="type-rumah"
+                name="type-rumah"
+                className=" w-[358px] md:w-[410px] h-[50px] md:h-[52px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 onChange={(element: any) => {
                   const newData = {
                     ...getData,
@@ -117,11 +151,23 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                   };
                   setGetData(newData);
                 }}
-              />
-              <input
-                type="text"
-                className="w-[410px] h-[40px] px-[20px] py-[26px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
-                placeholder="Rencana Beli"
+              >
+                <option value="" disabled selected hidden>
+                  Type Rumah
+                </option>
+                <option value="Gamal" className="h-[20px]">
+                  Type Gamal ( 36 / 75 )
+                </option>
+                <option value="Ibtisaam">Type Ibtisaam ( 45 / 84 ) </option>
+                <option value="Kafeel">Type Kafeel ( 54 / 75 )</option>
+                <option value="Mahdiy ">Type Mahdiy ( 60 / 84 )</option>
+                <option value="Pahleevi  ">Type Pahleevi ( 90 / 100 ) </option>
+              </select>
+
+              <select
+                id="type-rumah"
+                name="type-rumah"
+                className=" w-[358px] md:w-[410px] h-[50px] md:h-[52px] px-[20px] rounded-md border-[1.6px] border-color1 bg-[#E9E9E9]"
                 onChange={(element: any) => {
                   const newData = {
                     ...getData,
@@ -129,8 +175,16 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                   };
                   setGetData(newData);
                 }}
-              />
+              >
+                <option value="" disabled selected hidden>
+                  Rencana Beli
+                </option>
+                <option value="bulan-depan">Bulan depan</option>
+                <option value="belum-tahu">Belum tahu</option>
+                <option value="waktu-dekat">Dalam waktu dekat</option>
+              </select>
             </div>
+
             <div className="w-full h-fit flex justify-center mt-[40px]">
               <button
                 onClick={() => {
