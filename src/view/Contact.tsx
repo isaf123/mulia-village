@@ -1,10 +1,19 @@
 import * as React from "react";
 import Inputan from "@/components/inputContact";
 import Divider1 from "@/components/Divider1";
+import { eventGA } from "@/lib/gtag";
 
 interface IContactProps {}
 
 const Contact: React.FunctionComponent<IContactProps> = (props) => {
+  const [getData, setGetData] = React.useState<any>({
+    name: "",
+    email: "",
+    wa: "",
+    domicile: "",
+    type: "",
+    plan: "",
+  });
   return (
     <section className=" w-full h-fit bg-[#E9E9E9]">
       <Divider1>Contact Us</Divider1>
@@ -18,21 +27,49 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               className="w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               type="text"
               placeholder="Nama Lengkap"
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  name: element.target.value,
+                };
+                setGetData(newData);
+              }}
             />
             <input
               className=" mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               type="text"
               placeholder="E-mail"
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  email: element.target.value,
+                };
+                setGetData(newData);
+              }}
             />
             <input
               className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               type="text"
               placeholder="No. Whatsapp"
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  wa: element.target.value,
+                };
+                setGetData(newData);
+              }}
             />
             <input
               className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               type="text"
               placeholder="Kota Domisili"
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  domicile: element.target.value,
+                };
+                setGetData(newData);
+              }}
             />
             <select
               id="type-rumah"
@@ -40,8 +77,21 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               //   value={fromStation}
               //   onChange={(e) => setFromStation(e.target.value)}
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  type: element.target.value,
+                };
+                setGetData(newData);
+              }}
             >
-              <option value="" disabled selected hidden>
+              <option
+                value=""
+                disabled
+                selected
+                hidden
+                className="text-gray-300"
+              >
                 Type Rumah
               </option>
               <option value="Gamal">Type Gamal ( 36 / 75 )</option>
@@ -56,6 +106,13 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               className="mt-[10px] md:mt-[30px] w-[358px] md:w-[650px] h-[50px] md:h-[80px] pl-[20px] text-[10px] md:text-[24px] rounded-[10px] border-2 border-color1"
               //   value={fromStation}
               //   onChange={(e) => setFromStation(e.target.value)}
+              onChange={(element: any) => {
+                const newData = {
+                  ...getData,
+                  plan: element.target.value,
+                };
+                setGetData(newData);
+              }}
             >
               <option value="" disabled selected hidden>
                 Rencana Beli
@@ -65,7 +122,19 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
               <option value="waktu-dekat">Dalam waktu dekat</option>
             </select>
             <div className=" flex justify-center">
-              <button className="mb-0 md:mb-[211px] mt-[40px] md:mt-[132px] w-[280px] md:w-[515px] h-[50px] md:h-[80px] bg-color1 rounded-[10px] md:rounded-[20px] text-[10px] md:text-[30px] text-[#E9E9E9] font-semibold">
+              <button
+                className="mb-0 md:mb-[211px] mt-[40px] md:mt-[132px] w-[280px] md:w-[515px] h-[50px] md:h-[80px] bg-color1 rounded-[10px] md:rounded-[20px] text-[10px] md:text-[30px] text-[#E9E9E9] font-semibold"
+                onClick={() => {
+                  eventGA({
+                    action: "event_contactus_landing",
+                    category: "user_contact",
+                    label: `${getData.name}, ${getData.wa}`,
+                  });
+                  window.open(
+                    `https://wa.me/+6289644115873?text=🏠 *Halo ${getData.name}!* %0A%0A*Nama*: **${getData.name}**%0A*Email*: **${getData.email}**%0A*Nomor WhatsApp*: **${getData.wa}**%0A*Domisili*: **${getData.domicile}**%0A*Tipe*: **${getData.type}**%0A*Plan*: **${getData.plan}**%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
+                  );
+                }}
+              >
                 CONTACT{" "}
                 <span className=" font-normal font-playfair italic">US</span>
               </button>
