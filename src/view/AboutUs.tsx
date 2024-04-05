@@ -54,9 +54,6 @@ const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
               17 <span className="text-[10px] md:text-[30px]">build</span>
             </p>
           </div>
-          <div className="mt-[27px] md:mt-[70px]">
-            <ReadMoreButton />
-          </div>
         </div>
         <div className="w-[180px] md:w-[1340px] border-b-[2px] md:border-b-[6px] border-color1 absolute bottom-5 md:bottom-40 left-40 z-0 "></div>
       </div>
