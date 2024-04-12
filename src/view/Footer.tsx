@@ -38,10 +38,10 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
                   Contact Us :
                 </h1>
                 <h1 className="text-[8px] md:text-[30px] mt-[6px] md:mt-[19px]">
-                  Whatsapp : +62-898-1250-103
+                  Whatsapp : +62-898-1250-103 Whatsapp : +62-898-1250-103
                 </h1>
                 <h1 className="text-[8px] md:text-[30px] mt-[6px] md:mt-[30px]">
-                  Office : +62-898-1250-103
+                  Office : +62-898-1250-103 Office : +62-898-1250-103
                 </h1>
               </div>
             </div>
