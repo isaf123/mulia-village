@@ -265,9 +265,9 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
 
                 // href={`https://wa.me/+6289644115873?text=🏠%20*Halo%20${getData.name}!*%20%0A%0A*Nama*:%20**${getData.name}**%0A*Email*:%20**${getData.email}**%0A*Nomor%20WhatsApp*:%20**${getData.wa}**%0A*Domisili*:%20**${getData.domicile}**%0A*Tipe*:%20**${getData.type}**%0A*Plan*:%20**${getData.plan}**%0A%0ASelamat%20mencari%20rumah%20impian%20Anda!%20Kami%20siap%20membantu%20Anda%20dalam%20proses%20ini.%20😊`}
               >
-                <div className="md:w-[215px]">
+                <button className="md:w-[215px]">
                   Contact <span className="font-playfair italic ">Us</span>
-                </div>
+                </button>
               </a>
             </div>
           </div>
