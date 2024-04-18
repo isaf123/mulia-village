@@ -7,6 +7,7 @@ import { eventGA } from "@/lib/gtag";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { Link } from "react-scroll";
 import { IoAlertCircle } from "react-icons/io5";
+import { Button } from "./ui/button";
 
 interface INavbarMobileProps {}
 
@@ -71,14 +72,14 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
             </Link>
           </div>
 
-          <p
+          <button
             className="border-b-gray-300  border-b-[0.1px] border-t-gray-300  border-t-[0.1px] py-2 text-[14px] font-medium"
             onClick={() => {
               setActiveSite(!activeSite);
             }}
           >
             Site Plan
-          </p>
+          </button>
         </div>
       ) : (
         <></>
@@ -251,8 +252,7 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
                       ? window.open(
                           `https://wa.me/+628981250103?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
                         )
-                      : 
-                    setActiveAlert(true);
+                      : setActiveAlert(true);
                   }
 
                   {

@@ -164,10 +164,10 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
                   }
                 }}
               >
-                <p>
+                <button>
                   CONTACT{" "}
                   <span className=" font-normal font-playfair italic">US</span>
-                </p>
+                </button>
               </div>
             </div>
           </div>

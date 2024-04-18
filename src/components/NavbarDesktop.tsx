@@ -7,6 +7,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { Link } from "react-scroll";
 import { IoAlertCircle } from "react-icons/io5";
 import { useEffect } from "react";
+
 interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
@@ -65,14 +66,14 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
             Product
           </Link>
 
-          <p
+          <button
             className="hover:font-bold cursor-pointer w-fit"
             onClick={() => {
               setActiveSite(!activeSite);
             }}
           >
             Site Plan
-          </p>
+          </button>
         </div>
       </div>
       <a href=""></a>
@@ -244,8 +245,7 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                       ? window.open(
                           `https://wa.me/+628981250103?text=🏠 *Halo Mulia Village!* %0A%0A*Nama*: *${getData.name}*%0A*Email*: *${getData.email}*%0A*Nomor WhatsApp*: *${getData.wa}*%0A*Domisili*: *${getData.domicile}*%0A*Tipe*: *${getData.type}*%0A*Plan*: *${getData.plan}*%0A%0ASelamat mencari rumah impian Anda! Kami siap membantu Anda dalam proses ini. 😊`
                         )
-                      : 
-                    setActiveAlert(true);
+                      : setActiveAlert(true);
                   }
 
                   {
@@ -256,10 +256,10 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
                 }}
                 className=" text-[24px]  border-[2px] bg-color1 text-white font-medium  rounded-[10px]  py-[4px] px-[20px] "
               >
-                <div className="md:w-[215px]">
+                <button className="md:w-[215px]">
                   Contact{" "}
                   <span className="font-playfair italic font-normal">Us</span>
-                </div>
+                </button>
               </button>
             </div>
           </div>
